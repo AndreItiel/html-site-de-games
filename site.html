@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de site com layout moderno usando HTML e CSS avançado, focado em acessibilidade.">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Meu Site</h1>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Bem-vindo ao Meu Site</h2>
+            <p>Este é um projeto HTML + CSS com um layout moderno e acessível.</p>
+            <button class="btn">Saiba Mais</button>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor apaixonado por tecnologia e design responsivo.</p>
+            <img src="assets/perfil.jpg" alt="Foto de perfil do desenvolvedor com fundo neutro">
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <img src="assets/projeto1.jpg" alt="Captura de tela do Projeto 1 mostrando um site responsivo">
+                    <h3>God of War</h3>
+                    <p>(o bom de guerre)</p>
+                    <p>R$ 249,99</p>
+                </div>
+                <div class="card">
+                    <img src="assets/projeto2.jpg" alt="Imagem ilustrativa do Projeto 2 sobre design UX/UI">
+                    <h3>Pokemon Lengends Arceus</h3>
+                    <p>(melhor game da franquia)</p>
+                    <p>R$ 349,00</p>
+                </div>
+                <div class="card">
+                    <img src="assets/projeto3.jpg" alt="Demonstração de um dashboard interativo do Projeto 3">
+                    <h3>Assassin's Creed Black Flag</h3>
+                    <p>(o melhor game de pirata)</p>
+                    <p>R$ 35,99</p>
+                </div>
+                <div class="card">
+                    <img src="assets/projeto4.jpg" alt="Imagem representativa do Projeto 4 sobre acessibilidade web">
+                    <h3>Hollow Knight</h3>
+                    <p>(descubra um mundo novo)</p>
+                    <p>R$ 46,99</p>
+                </div>
+                <div class="card">
+                    <img src="assets/projeto5.jpg" alt="Protótipo de um aplicativo mobile do Projeto 5">
+                    <h3>Palworld</h3>
+                    <p>(pegue todos)</p>
+                    <p>R$ 88,99</p>
+                </div>
+                <div class="card">
+                    <img src="assets/projeto6.jpg" alt="Interface moderna de um sistema web do Projeto 6">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>(obra prima)</p>
+                    <p>R$ 299,90</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required aria-label="Nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required aria-label="E-mail">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required aria-label="Mensagem"></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+:root {
+  --cor-primaria: #1E1E2F;
+  --cor-secundaria: #4CAF50;
+  --cor-texto: #FFFFFF;
+  --cor-fundo: #121212;
+  --fonte-padrao: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-padrao);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cor-primaria);
+  padding: 20px;
+}
+
+.menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 80px 20px;
+  background: var(--cor-secundaria);
+  color: white;
+}
+
+.btn {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background: #333354;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1F1F3D;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--cor-primaria);
+  color: white;
+}
+</style>
